@@ -1,0 +1,33 @@
+.football-volleyball {
+  background-image: url(../img/football-volleyball/bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 720px;
+  margin-bottom: 145px;
+  display: flex;
+  align-items: center;
+  &__item {
+    display: flex;
+    align-items: center;
+    flex: 0 0 50%;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__picture {
+  }
+  &__content {
+  }
+  &__subtitle {
+  }
+  &__title {
+  }
+  &__text {
+    width: 59%;
+  }
+  &__link {
+  }
+}

@@ -1,0 +1,269 @@
+//------------------------------- MAX-WIDTH 1700 ---------------------//
+@media (max-width: 1700px) {
+  
+}
+//------------------------------- MAX-WIDTH 1600 ---------------------//
+@media (max-width: 1600px) {
+  
+}
+//------------------------------- MAX-WIDTH 1570 ---------------------//
+@media (max-width: 1570px) {
+  
+}
+//------------------------------- MAX-WIDTH 1500 ---------------------//
+@media (max-width: 1500px) { 
+  
+}
+//------------------------------- MAX-WIDTH 1399.99 desktops ---------//
+@media (max-width: 1399.99px) {
+  
+}
+//------------------------------- MAX-WIDTH 1199.98 -----------------//
+@media (max-width: 1199.98px) {
+  .intro-carous {
+    &__content {
+      width: 100%;
+    }
+  }
+  .best-seller {
+    .lin-gd {
+        &::before {
+        left: 548px;
+      }
+    }
+  }
+  .title-view-block {
+    &__text {
+      width: 38%;
+    }
+  }
+  .why-choose-shop {
+    &__inner {
+      gap: 50px;
+    }
+    &__video {
+      padding: 0px 0px 44% 0px;
+    }
+  }
+  .categor-scroll {
+    &__item {
+      flex: 0 0 40%;
+    }
+  }
+}
+//------------------------------- MAX-WIDTH 990.98 tablets ----------//
+@media (max-width: $tablet) {
+  .menu {
+    display: none;
+  }
+  .menu-nav {
+    gap: 48px;
+  }
+  // burger---------------------------------------//
+  .icon-menu {
+    display: block;
+    position: relative;
+    flex: 0 0 rem(35);
+    height: rem(24);
+    background: 0;
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before
+    // &::after 
+    {
+      content: "";
+      transform: all 0.3s ease 0s;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(3);
+      background: $titleColor;
+    } 
+    &::before {
+      top: 0;
+    }
+    // &::after {
+    //   bottom: 0;
+    // }
+    span {
+      top: calc(52% - 2px);
+    }
+    .menu-open & {
+      span {
+        transform: scale(0);
+      }
+      &::before {
+        transform: rotate(-45deg);
+        top: calc(50% - 1px);
+      }
+      &::after {
+        transform: rotate(45deg);
+        bottom: calc(50% - 1px);
+      }
+    }
+  }
+  // .open {
+  //   display: flex;
+  //   flex-direction: column;
+  //   background: $accentColor;
+  //   width: 100%;
+  //   height: 100vh;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   align-items: center;
+  //   justify-content: center;
+  //   .menu__link{
+  //     color: $whiteColor;
+  //     font-size: rem(35);
+  //   }
+  // }
+  .featured-products-carous__item {
+    flex: 0 0 33.333%;
+  }
+  .best-seller {
+    .lin-gd {
+        &::before {
+        left: 427px;
+      }
+    }
+  }
+  .title-view-block {
+    &__text {
+      width: 45%;
+    }
+  }
+  .why-choose-shop {
+    &__inner {
+      align-items: stretch;
+      flex-direction: column;
+    }
+    &__video {
+      padding: 0px 0px 57% 0px;
+    }
+  }
+  .categor-scroll {
+    &__item {
+      flex: 0 0 48.3%;
+    }
+  }
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__item {
+      justify-content: flex-start;
+      gap: 60px;
+    }
+  }
+  .footer {
+    &__body {
+      row-gap: 25px;
+    }
+    &__item {
+      flex: 0 0 50%;
+    }
+  }
+} 
+//------------------------------- MAX-WIDTH 885 ---------------------//
+@media (max-width: 885px) {
+  
+}
+//------------------------------- MAX-WIDTH 841 ---------------------//
+@media (max-width: 842px) {
+  
+}
+//------------------------------- MAX-WIDTH 767.98 landscape phones ---------------------//
+@media (max-width: $mobile) {
+  .featured-products-carous__item {
+    flex: 0 0 50%;
+  }
+  .best-seller {
+    .lin-gd {
+        &::before {
+        left: 520px;
+        height: 395px;
+      }
+    }
+    &__title-check {
+      flex-direction: column;
+    }
+  }
+  .best-seller-shoe {
+    flex-direction: column;
+  }
+  .best-seller .lin-gd {
+    &::before {
+      display: none;
+    }
+  }
+  .categor-scroll {
+    &__item {
+      flex: 0 0 60%;
+    }
+  }
+  .subscribe {
+    &__body {
+      flex-direction: column;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__picture {
+      justify-content: center;
+    }
+  }
+  .social {
+    padding-top: 32px;
+    justify-content: center;
+  }
+}
+@media (max-width: 646px) {
+  .categor-scroll {
+    &__item {
+      flex: 0 0 100%;
+    }
+  }
+}
+//------------------------------- MAX-WIDTH 575.98 portrait phones ---------------------//
+@media (max-width: 575.98px) {
+  .featured-products-carous__item {
+    flex: 0 0 100%;
+  }
+  .categories {
+    &__text {
+      width: 100%;
+    }
+  }
+  .footer {
+    &__item {
+      flex: 0 0 100%;
+    }
+    &__text {
+      width: 100%;
+    }
+  }
+}
+//------------------------------- MAX-WIDTH 500 ---------------------//
+@media (max-width: 500px) {
+  .title-view-block {
+    &__text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+//------------------------------- MAX-WIDTH 418 ---------------------//
+@media (max-width: 418px) {
+  .benefits {
+    &__title::before {
+      padding-right: 12px;
+    }
+  }
+  .categor-scroll {
+    &__item {
+      padding: 20px;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@use 'sass:math';
+@import 'common/fonts';
+@import 'common/icons';
+@import 'common/reset';
+@import 'common/variable';
+@import 'common/mixins';
+
+body {
+  font-size: rem(16);
+  color: $textColor;
+  font-family: $fontFamily;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: $titleColor;
+}
+button {
+  border: 0;
+  cursor: pointer;
+}
+fieldset {
+  border: 0;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; 
+}
+.page {
+  flex: 1 1 auto;
+}
+[class*="container"] {
+  max-width: $maxWidthContainer; 
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+@media (max-width: 1199.98px) {
+  [class*="container"] {
+    max-width: 970px;
+  }
+}
+@media (max-width: $tablet) {
+  [class*="container"] {
+    max-width: 750px;
+  }
+}
+@media (max-width: $mobile) {
+  [class*="container"] {
+    max-width: none;
+  }
+}
+
+.title-h4 {
+  padding-top: 23px;
+  padding-bottom: 19px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+}
+.title-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__link {
+    color: $accentColor;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 16px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    &::before {
+      transform: rotate(90deg);
+    }
+    // &:hover {
+    //   text-decoration: underline;
+    // }
+  }
+}
+.text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+}
+.price {
+  color: $titleColor;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+}
+.btn {
+  color: $whiteColor;
+  background-color: $accentColor;
+  padding: 11px 50.2px;
+  position: relative;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  transition: background-color .3s ease 0s;
+  &:hover {
+    background-color: #ff6897;
+  }
+  &::before {
+    content: "";
+    background: #FE97B7;
+    width: 136px;
+    height: 36px;
+    filter: blur(24px);
+    position: absolute;
+    top: 23px;
+    left: 20px;
+    border-radius: 8px;
+    z-index: -1;
+  }
+}
+
+
+
+@import 'site-parts/header';
+@import 'site-parts/intro';
+@import 'site-parts/featured-products';
+@import 'site-parts/football-volleyball';
+@import 'site-parts/best-seller';
+@import 'site-parts/new-arrivals';
+@import 'site-parts/why-choose-shop';
+@import 'site-parts/categor-scroll';
+@import 'site-parts/brands';
+@import 'site-parts/subscribe';
+
+@import 'site-parts/footer';
+@import 'site-parts/media';

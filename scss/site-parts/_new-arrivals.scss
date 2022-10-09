@@ -1,0 +1,81 @@
+.new-arrivals {
+  background-color: #f5f5f5;
+  padding: 100px 0;
+}
+.card-carous {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 70px;
+  &__item {
+  }
+  &__picture {
+    position: relative;
+    margin-bottom: 27px;
+    img {
+      position: relative;
+      // z-index: -1;
+      // &::after {
+      //   content: "+";
+      //   position: absolute;
+      //   right: 0;
+      //   bottom: 0;
+      // }
+    }
+  }
+  &__num {
+    color: $whiteColor;
+    position: absolute;
+    top: 16px;
+    left: 24px;
+
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.04em;
+    z-index: 100;
+  }
+  &__plus {
+    position: absolute;
+    left: 151px;
+    bottom: 19px;
+
+    background-color: $whiteColor;
+    width: 49px;
+    height: 28px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  &__content {
+    padding-left: 10px;
+  }
+  &__rating {
+  }
+  &__title {
+  }
+  &__price {
+  }
+  .slick-track {
+    display: flex;
+    gap: 14px;
+  }
+  .slick-dots {
+    bottom: -73px;
+    li button::before {
+      color: #c1c0c0;
+      font-size: 12px;
+    }
+    .slick-active button::before {
+      color: $blueColor;
+    }
+  }
+}
+.title-view-block {
+  &__text {
+    width: 30%;
+    padding-top: 18px;
+  }
+}

@@ -1,0 +1,141 @@
+
+
+.tgl {
+	display: none;
+  
+
+  
+	+ .tgl-btn {
+		outline: 0;
+		display: block;
+		width: 4em;
+		height: 2em;
+		position: relative;
+		cursor: pointer;
+    user-select: none;
+		&:after,
+    &:before {
+			position: relative;
+			display: block;
+			content: "";
+			width: 50%;
+			height: 100%;
+		}
+    
+		&:after {
+			left: 0;
+		}
+    
+		&:before {
+			display: none;
+		}
+	}
+  
+	&:checked + .tgl-btn:after {
+		left: 50%;
+	}
+}
+
+// themes
+.tgl-light {
+	+ .tgl-btn {
+		background: linear-gradient(97.49deg, #8AA8F8 -0.43%, #315BFF 144.53%);
+		border-radius: 2em;
+		padding: 2px;
+		transition: all .4s ease;
+		&:after {
+			border-radius: 50%;
+			background-color: $whiteColor;
+      filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.06));
+			transition: all .2s ease;
+		}
+	}
+  
+	&:checked + .tgl-btn {
+		background: #9FD6AE;
+	}
+}
+
+.best-seller {
+  padding-bottom: 145px;
+  // position: relative;
+  &__title-check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__check-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  &__text {
+    color: $titleColor;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .lin-gd {
+    position: relative;
+      &::before {
+      content: "";
+      position: absolute;
+      left: 679px;
+      top: 0;
+      width: 100%;
+      height: -webkit-fill-available;
+      background: linear-gradient(270deg, #FF3C78 2.8%, #FFB2B2 100%);
+      z-index: -1;
+      transform: translate(-120%, 0px);
+      border-radius: 0 30px 30px 0;
+    }
+  }
+}
+.best-seller-shoe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 63px;
+  &__item {
+  }
+  &__rating {
+  }
+  &__title {
+    padding: 21px 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.04em;
+  }
+  &__price {
+    // color: $titleColor;
+    // font-weight: 700;
+    // font-size: 24px;
+    // line-height: 32px;
+    // letter-spacing: -0.04em;
+  }
+  &__picture {
+    // position: relative;
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   width: 512px;
+    //   height: 467px;
+    //   background: linear-gradient(270deg, #FF3C78 2.8%, #FFB2B2 100%);
+    //   z-index: -1;
+    // }
+  }
+  
+}
+.best-seller-btn {
+  display: flex;
+  padding-top: 44px;
+  .btn {
+    background-color: $blueColor;
+    &::before {
+      background-color: $blueColor;
+    }
+  }
+}
