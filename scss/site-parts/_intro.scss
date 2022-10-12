@@ -19,7 +19,8 @@
     transform: translateY(-50%);
   }
   &__content {
-    width: 82%;
+    // width: 82%;
+    flex: 0 0 45%;
   }
   &__title {
     color: $titleColor;
@@ -30,6 +31,7 @@
     letter-spacing: -0.04em;
   }
   &__text {
+    width: 60%;
     padding-top: 31px;
     padding-bottom: 50px;
     color: $textColor;
@@ -41,7 +43,8 @@
 
   }
   &__picture {
-    width: 100%;
+    // width: 100%;
+    flex: 0 0 55%;
   }
 }
 .shop-heart {

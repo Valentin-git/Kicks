@@ -22,7 +22,11 @@
 @media (max-width: 1199.98px) {
   .intro-carous {
     &__content {
-      width: 100%;
+      // width: 100%;
+      flex: 0 0 50%;
+    }
+    &__text {
+      width: 80%;
     }
   }
   .best-seller {
@@ -58,17 +62,19 @@
   }
   .menu-nav {
     gap: 48px;
+    align-items: center;
   }
   // burger---------------------------------------//
   .icon-menu {
     display: block;
     position: relative;
-    flex: 0 0 rem(35);
-    height: rem(24);
+    // flex: 0 0 35px;
+    width: 35px;
+    height: 15px;
     background: 0;
     cursor: pointer;
     z-index: 5;
-    span,
+    &::after,
     &::before
     // &::after 
     {
@@ -77,18 +83,19 @@
       left: 0;
       position: absolute;
       width: 100%;
-      height: rem(3);
-      background: $titleColor;
+      height: 3px;
+      background: #272E35;
+      border-radius: 5px;
     } 
     &::before {
       top: 0;
     }
-    // &::after {
-    //   bottom: 0;
-    // }
-    span {
-      top: calc(52% - 2px);
+    &::after {
+      bottom: 0;
     }
+    // span {
+    //   top: calc(52% - 2px);
+    // }
     .menu-open & {
       span {
         transform: scale(0);
@@ -103,22 +110,14 @@
       }
     }
   }
-  // .open {
-  //   display: flex;
-  //   flex-direction: column;
-  //   background: $accentColor;
-  //   width: 100%;
-  //   height: 100vh;
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   align-items: center;
-  //   justify-content: center;
-  //   .menu__link{
-  //     color: $whiteColor;
-  //     font-size: rem(35);
-  //   }
-  // }
+  .intro {
+    min-height: 1450px;
+  }
+  .intro-carous {
+    &__item {
+      flex-direction: column;
+    }
+  }
   .featured-products-carous__item {
     flex: 0 0 33.333%;
   }
@@ -155,6 +154,26 @@
     &__item {
       justify-content: flex-start;
       gap: 60px;
+    }
+  }
+  .football-volleyball {
+    &__inner {
+      flex-direction: column;
+      &::before {
+        left: 0;
+        top: 50%;
+        width: 100vw;
+        transform: translate(0, -100%);
+      }
+      &::after {
+        top: 50%;
+        right: 0;
+        width: 100vw;
+        transform: translate(0, 0);
+      }
+    }
+    &__item {
+      flex-direction: column-reverse;
     }
   }
   .footer {
@@ -228,8 +247,54 @@
 }
 //------------------------------- MAX-WIDTH 575.98 portrait phones ---------------------//
 @media (max-width: 575.98px) {
-  .featured-products-carous__item {
-    flex: 0 0 100%;
+  .search-user-cart {
+    gap: 30px;
+  }
+  .intro {
+    min-height: 1450px;
+  }
+  .intro-carous {
+    &__item {
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__title {
+      text-align: center;
+      line-height: 40px;
+    }
+    &__text {
+      text-align: center;
+    }
+  }
+  .title-view {
+    flex-direction: column;
+    &__link {
+      padding-top: 20px;
+    }
+  }
+  .featured-products-carous {
+    padding-top: 80px;
+    &__item {
+      flex: 0 0 100%;
+    }
+  }
+  .title-view-block {
+    &__text {
+      width: 65%;
+      text-align: center;
+      margin: auto;
+    }
+  }
+  .title {
+    text-align: center;
+  }
+  .best-seller {
+    &__check-text {
+      padding-top: 20px;
+    }
   }
   .categories {
     &__text {

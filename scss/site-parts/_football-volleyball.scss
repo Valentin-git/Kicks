@@ -1,33 +1,98 @@
 .football-volleyball {
-  background-image: url(../img/football-volleyball/bg.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 720px;
+  // background-image: url(../img/football-volleyball/bg.svg);
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  // min-height: 720px;
+  // padding: 30px 0;
   margin-bottom: 145px;
   display: flex;
   align-items: center;
   &__item {
     display: flex;
     align-items: center;
+    gap: 65px;
     flex: 0 0 50%;
+    padding-left: 100px;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  .col-gd {
+    // position: relative;
   }
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    padding: 43px 0;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 100%;
+      height: -webkit-fill-available;
+      background: $greenColor;
+      z-index: -1;
+      transform: translate(-100%, 0px);
+    }
+    &::after {
+      content: "";
+      background: #0A083A;
+      position: absolute;
+      top: 0;
+      right: 50%;
+      width: 100%;
+      transform: translate(100%, 0px);
+      z-index: -1;
+      height: -webkit-fill-available;
+    }
   }
   &__picture {
+    width: 50%;
+    img {
+      width: 100%;
+    }
   }
   &__content {
   }
   &__subtitle {
+    &_green {
+      color: $greenColor;
+    }
   }
   &__title {
+    color: $whiteColor;
+    padding-bottom: 35px;
+    padding-top: 9px;
   }
   &__text {
-    width: 59%;
+    color: $whiteColor;
+    width: 82%;
+    padding-bottom: 45px;
   }
   &__link {
+    &_blue {
+      background: $greenColor;
+      transition: background-color .3s ease 0s;
+      &:hover {
+        background-color: #62cdab;
+      }
+      &::before {
+        background: rgba(2, 190, 131, 0.3);
+      }
+    }
+    &_green {
+      background: #0A083A;
+      transition: background-color .3s ease 0s;
+      &:hover {
+        background: rgb(59, 56, 134);
+      }
+      &::before {
+        background: rgba(10, 8, 58, 0.3);
+      }
+    }
   }
 }

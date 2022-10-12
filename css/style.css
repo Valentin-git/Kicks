@@ -178,6 +178,24 @@ fieldset {
   }
 }
 
+.title {
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: calc(30px + 30.6 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (min-width: 767px) {
+  .title {
+    font-size: calc(30px + 18 * (100vw  / 1600));
+  }
+}
+
 .title-h4 {
   padding-top: 23px;
   padding-bottom: 19px;
@@ -353,7 +371,7 @@ fieldset {
 }
 
 .intro-carous__content {
-  width: 82%;
+  flex: 0 0 45%;
 }
 
 .intro-carous__title {
@@ -376,6 +394,7 @@ fieldset {
 }
 
 .intro-carous__text {
+  width: 60%;
   padding-top: 31px;
   padding-bottom: 50px;
   color: #6c6b6b;
@@ -385,7 +404,7 @@ fieldset {
 }
 
 .intro-carous__picture {
-  width: 100%;
+  flex: 0 0 55%;
 }
 
 .shop-heart {
@@ -428,13 +447,6 @@ fieldset {
 
 .featured-products {
   padding: 145px 0;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -0.04em;
 }
 
 .featured-products-carous {
@@ -481,11 +493,6 @@ fieldset {
 }
 
 .football-volleyball {
-  background-image: url(../img/football-volleyball/bg.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 720px;
   margin-bottom: 145px;
   display: flex;
   align-items: center;
@@ -494,17 +501,95 @@ fieldset {
 .football-volleyball__item {
   display: flex;
   align-items: center;
+  gap: 65px;
   flex: 0 0 50%;
+  padding-left: 100px;
+}
+
+.football-volleyball__item:first-child {
+  padding-left: 0;
 }
 
 .football-volleyball__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  padding: 43px 0;
+}
+
+.football-volleyball__inner::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100%;
+  height: -webkit-fill-available;
+  background: #02be83;
+  z-index: -1;
+  transform: translate(-100%, 0px);
+}
+
+.football-volleyball__inner::after {
+  content: "";
+  background: #0A083A;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 100%;
+  transform: translate(100%, 0px);
+  z-index: -1;
+  height: -webkit-fill-available;
+}
+
+.football-volleyball__picture {
+  width: 50%;
+}
+
+.football-volleyball__picture img {
+  width: 100%;
+}
+
+.football-volleyball__subtitle_green {
+  color: #02be83;
+}
+
+.football-volleyball__title {
+  color: white;
+  padding-bottom: 35px;
+  padding-top: 9px;
 }
 
 .football-volleyball__text {
-  width: 59%;
+  color: white;
+  width: 82%;
+  padding-bottom: 45px;
+}
+
+.football-volleyball__link_blue {
+  background: #02be83;
+  transition: background-color .3s ease 0s;
+}
+
+.football-volleyball__link_blue:hover {
+  background-color: #62cdab;
+}
+
+.football-volleyball__link_blue::before {
+  background: rgba(2, 190, 131, 0.3);
+}
+
+.football-volleyball__link_green {
+  background: #0A083A;
+  transition: background-color .3s ease 0s;
+}
+
+.football-volleyball__link_green:hover {
+  background: #3b3886;
+}
+
+.football-volleyball__link_green::before {
+  background: rgba(10, 8, 58, 0.3);
 }
 
 .tgl {
@@ -729,13 +814,6 @@ fieldset {
 
 .why-choose-shop__content {
   flex: 0 1 40%;
-}
-
-.why-choose-shop__title {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: -0.04em;
 }
 
 .why-choose-shop__text {
@@ -1131,7 +1209,10 @@ fieldset {
 
 @media (max-width: 1199.98px) {
   .intro-carous__content {
-    width: 100%;
+    flex: 0 0 50%;
+  }
+  .intro-carous__text {
+    width: 80%;
   }
   .best-seller .lin-gd::before {
     left: 548px;
@@ -1156,30 +1237,32 @@ fieldset {
   }
   .menu-nav {
     gap: 48px;
+    align-items: center;
   }
   .icon-menu {
     display: block;
     position: relative;
-    flex: 0 0 2.1875rem;
-    height: 1.5rem;
+    width: 35px;
+    height: 15px;
     background: 0;
     cursor: pointer;
     z-index: 5;
   }
-  .icon-menu span, .icon-menu::before {
+  .icon-menu::after, .icon-menu::before {
     content: "";
     transform: all 0.3s ease 0s;
     left: 0;
     position: absolute;
     width: 100%;
-    height: 0.1875rem;
-    background: #0a083a;
+    height: 3px;
+    background: #272E35;
+    border-radius: 5px;
   }
   .icon-menu::before {
     top: 0;
   }
-  .icon-menu span {
-    top: calc(52% - 2px);
+  .icon-menu::after {
+    bottom: 0;
   }
   .menu-open .icon-menu span {
     transform: scale(0);
@@ -1191,6 +1274,12 @@ fieldset {
   .menu-open .icon-menu::after {
     transform: rotate(45deg);
     bottom: calc(50% - 1px);
+  }
+  .intro {
+    min-height: 1450px;
+  }
+  .intro-carous__item {
+    flex-direction: column;
   }
   .featured-products-carous__item {
     flex: 0 0 33.333%;
@@ -1219,6 +1308,24 @@ fieldset {
   .benefits__item {
     justify-content: flex-start;
     gap: 60px;
+  }
+  .football-volleyball__inner {
+    flex-direction: column;
+  }
+  .football-volleyball__inner::before {
+    left: 0;
+    top: 50%;
+    width: 100vw;
+    transform: translate(0, -100%);
+  }
+  .football-volleyball__inner::after {
+    top: 50%;
+    right: 0;
+    width: 100vw;
+    transform: translate(0, 0);
+  }
+  .football-volleyball__item {
+    flex-direction: column-reverse;
   }
   .footer__body {
     row-gap: 25px;
@@ -1270,8 +1377,46 @@ fieldset {
 }
 
 @media (max-width: 575.98px) {
+  .search-user-cart {
+    gap: 30px;
+  }
+  .intro {
+    min-height: 1450px;
+  }
+  .intro-carous__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro-carous__title {
+    text-align: center;
+    line-height: 40px;
+  }
+  .intro-carous__text {
+    text-align: center;
+  }
+  .title-view {
+    flex-direction: column;
+  }
+  .title-view__link {
+    padding-top: 20px;
+  }
+  .featured-products-carous {
+    padding-top: 80px;
+  }
   .featured-products-carous__item {
     flex: 0 0 100%;
+  }
+  .title-view-block__text {
+    width: 65%;
+    text-align: center;
+    margin: auto;
+  }
+  .title {
+    text-align: center;
+  }
+  .best-seller__check-text {
+    padding-top: 20px;
   }
   .categories__text {
     width: 100%;
