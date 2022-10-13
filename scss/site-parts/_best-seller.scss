@@ -1,10 +1,5 @@
-
-
 .tgl {
 	display: none;
-  
-
-  
 	+ .tgl-btn {
 		outline: 0;
 		display: block;
@@ -107,27 +102,6 @@
     line-height: 32px;
     letter-spacing: -0.04em;
   }
-  &__price {
-    // color: $titleColor;
-    // font-weight: 700;
-    // font-size: 24px;
-    // line-height: 32px;
-    // letter-spacing: -0.04em;
-  }
-  &__picture {
-    // position: relative;
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   left: 0;
-    //   top: 0;
-    //   width: 512px;
-    //   height: 467px;
-    //   background: linear-gradient(270deg, #FF3C78 2.8%, #FFB2B2 100%);
-    //   z-index: -1;
-    // }
-  }
-  
 }
 .best-seller-btn {
   display: flex;

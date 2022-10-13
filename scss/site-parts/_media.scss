@@ -22,7 +22,6 @@
 @media (max-width: 1199.98px) {
   .intro-carous {
     &__content {
-      // width: 100%;
       flex: 0 0 50%;
     }
     &__text {
@@ -68,7 +67,6 @@
   .icon-menu {
     display: block;
     position: relative;
-    // flex: 0 0 35px;
     width: 35px;
     height: 15px;
     background: 0;
@@ -76,7 +74,6 @@
     z-index: 5;
     &::after,
     &::before
-    // &::after 
     {
       content: "";
       transform: all 0.3s ease 0s;
@@ -93,9 +90,6 @@
     &::after {
       bottom: 0;
     }
-    // span {
-    //   top: calc(52% - 2px);
-    // }
     .menu-open & {
       span {
         transform: scale(0);
@@ -157,6 +151,7 @@
     }
   }
   .football-volleyball {
+    display: none;
     &__inner {
       flex-direction: column;
       &::before {
@@ -251,7 +246,7 @@
     gap: 30px;
   }
   .intro {
-    min-height: 1450px;
+    min-height: 1325px;
   }
   .intro-carous {
     &__item {
@@ -267,6 +262,12 @@
     }
     &__text {
       text-align: center;
+    }
+  }
+  .ship-ret {
+    gap: 20px;
+    &__item {
+      gap: 10px;
     }
   }
   .title-view {
@@ -302,12 +303,18 @@
     }
   }
   .footer {
+    padding-bottom: 30px;
     &__item {
       flex: 0 0 100%;
     }
     &__text {
       width: 100%;
+      padding-bottom: 30px;
     }
+  }
+  .footer-copir {
+    margin-top: 30px;
+    padding-top: 30px
   }
 }
 //------------------------------- MAX-WIDTH 500 ---------------------//
@@ -321,6 +328,9 @@
 }
 //------------------------------- MAX-WIDTH 418 ---------------------//
 @media (max-width: 418px) {
+  .intro {
+    min-height: 1225px;
+  }
   .benefits {
     &__title::before {
       padding-right: 12px;

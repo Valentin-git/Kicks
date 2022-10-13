@@ -9,7 +9,6 @@
     flex: 0 1 60%;
     padding: 0px 0px 35% 0px;
     position: relative;
-    // box-shadow: 0px 4px 18px rgb(88 126 236 / 18%);
     border-radius: 8px;
     overflow: hidden;
     iframe {
@@ -23,12 +22,6 @@
   }
   &__content {
     flex: 0 1 40%;
-  }
-  &__title {
-    // font-weight: 700;
-    // font-size: 40px;
-    // line-height: 48px;
-    // letter-spacing: -0.04em;
   }
   &__text {
     padding-top: 36px;
@@ -52,9 +45,4 @@
       font-size: 31px;
     }
   }
-}
-
-._icon-car {
-}
-._icon-support {
 }

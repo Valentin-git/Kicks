@@ -1,10 +1,4 @@
 .football-volleyball {
-  // background-image: url(../img/football-volleyball/bg.svg);
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
-  // min-height: 720px;
-  // padding: 30px 0;
   margin-bottom: 145px;
   display: flex;
   align-items: center;
@@ -18,9 +12,6 @@
       padding-left: 0;
     }
   }
-  .col-gd {
-    // position: relative;
-  }
   &__inner {
     display: flex;
     align-items: center;
@@ -30,22 +21,22 @@
     &::before {
       content: "";
       position: absolute;
-      left: 50%;
+      left: 0;
       top: 0;
-      width: 100%;
+      width: 147%;
       height: -webkit-fill-available;
       background: $greenColor;
       z-index: -1;
-      transform: translate(-100%, 0px);
+      transform: translate(-66%, 0px);
     }
     &::after {
       content: "";
       background: #0A083A;
       position: absolute;
       top: 0;
-      right: 50%;
-      width: 100%;
-      transform: translate(100%, 0px);
+      right: 0;
+      width: 147%;
+      transform: translate(66%, 0px);
       z-index: -1;
       height: -webkit-fill-available;
     }

@@ -1,12 +1,5 @@
 .categories {
   margin-top: 100px;
-  // &__inner {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   // margin-bottom: 144px;
-  //   // scroll-snap-type: x mandatory;
-  // }
   &__title {
     padding-bottom: 20px;
     text-align: center;
@@ -22,7 +15,6 @@
   padding-bottom: 144px;
   margin-bottom: 144px;
   display: flex;
-  // scroll-snap-type: x mandatory;
   overflow-x: scroll;
   cursor: pointer;
   gap: 24px;
@@ -30,7 +22,6 @@
     position: relative;
     flex: 0 0 31.94%;
     background-color: #f5f5f5;
-    // width: 356px;
     height: 382px;
     padding: 48px 32px;
     border-radius: 16px;

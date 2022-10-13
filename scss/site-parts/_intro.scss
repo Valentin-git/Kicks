@@ -1,15 +1,9 @@
 .intro {
-  // background-image: url(../img/header/bg.png);
-  // background-position: center;
-  // background-size: cover;
   background-color: #f5f5f5;
   min-height: 985px;
   position: relative;
 }
 .intro-carous {
-  // position: absolute;
-  // top: 50%;
-  // transform: translateY(-50%);
   &__item {
     display: flex;
     align-items: center;
@@ -19,13 +13,11 @@
     transform: translateY(-50%);
   }
   &__content {
-    // width: 82%;
     flex: 0 0 45%;
   }
   &__title {
     color: $titleColor;
     font-weight: 700;
-    // font-size: 72px;
     @include adaptiv(72, 32);
     line-height: 80px;
     letter-spacing: -0.04em;
@@ -39,11 +31,7 @@
     font-size: 20px;
     line-height: 32px;
   }
-  &__link {
-
-  }
   &__picture {
-    // width: 100%;
     flex: 0 0 55%;
   }
 }
@@ -60,8 +48,6 @@
     font-size: 22px;
   }
 }
-
-
 ._icon-favorite {
 }
 .ship-ret {
